@@ -1,12 +1,32 @@
-.main-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #00B7FF;
-  color: #fff; }
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+.application-root {
+  font-family: 'Oswald', sans-serif; }
 
-a {
-  color: #fff;
-  text-decoration: underline;
-  font-weight: bold; }
+.application-root_parameters {
+  padding: 20px; }
+
+.application-root__title_logo {
+  font-size: 44px; }
+
+.form-container {
+  padding-top: 30px; }
+
+.form-inline {
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.form-group_full-width {
+  width: 100%; }
+
+.input-group_full-width {
+  width: 100%; }
+
+.input-group-addon_5 {
+  width: 5% !important; }
+
+.thief_button {
+  width: 100%;
+  font-size: 20px !important;
+  margin-top: 20px; }
 
 /*# sourceMappingURL=style.css.map */

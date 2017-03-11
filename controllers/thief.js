@@ -1,23 +1,32 @@
 const express = require('express');
 const router = express.Router();
-const Email = require('./../helpers/emailSender');
 const Downloader = require('./../helpers/pageDownloader');
+const responseTemplates = {
+    startProcess: {
+        title: "Воришка начал свое грязное дело!",
+        description: "Как только Воришка добуде содержимое он свяжеться с вами..."
+    },
+    checkPage: {
+        title: "Воришка не знает что делать..",
+        description: "Что бы Воришка начал действовать вы должны дать наводку!"
+    }
+};
+
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    res.render('thief', {
-        title: 'Thief start his dirty job!',
-        desciption: 'We will send link with web page'});
+    res.render('thief', responseTemplates.checkPage);
 });
 
 
 router.post('/', function (req, res) {
     let reqParam = req.body;
-    if(reqParam.url == undefined || !protocolUrlValidator(reqParam.url)){
+    if (reqParam.url == undefined || !protocolUrlValidator(reqParam.url)) {
         res.send("URL param is not found or URL is not valid");
         return;
     }
-    Downloader.saveWebApplication(nameGenerator(reqParam.url))
-    res.send("Your request is successful: " + reqParam.url);
+    Downloader.saveWebApplication(nameGenerator(reqParam.url));
+    res.render('thief', responseTemplates.startProcess);
 });
 
 function nameGenerator(url) {

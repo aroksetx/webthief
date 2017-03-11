@@ -9,9 +9,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
-<body>
-<h1><%= title %></h1>
-<p><%= desciption %></p>
+<body class="application-root application-root_parameters">
+
+<h1 class="application-root__title application-root__title_logo">ВебВоришка</h1>
+<h3 class="application-root__description">Первый автоматизированный сервис по скачиванию сайтов в Рунете. </h3>
+
+<div class="form-container row">
+    <div class="form-inline col-md-6 col-md-offset-3" method="POST" action="/thief">
+        <h1><%= title %></h1>
+        <p><%= description %></p>
+    </div>
+</div>
+
+
+
+
 </body>
 </html>

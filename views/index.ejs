@@ -9,28 +9,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
   </head>
-  <body class="main-body">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container custom-bar">
+  <body class="application-root application-root_parameters">
 
-    </div>
-  </nav>
+  <h1 class="application-root__title application-root__title_logo">ВебВоришка</h1>
+  <h3 class="application-root__description">Первый автоматизированный сервис по скачиванию сайтов в Рунете. </h3>
 
-  <div class="row">
-    <div class="content">
-      <form class="form-inline" method="POST" action="/thief">
-        <div class="form-group">
-          <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-          <div class="input-group">
-            <div class="input-group-addon">URL:</div>
-            <input type="text" class="form-control" name="url" id="exampleInputAmount" placeholder="Amount">
-          </div>
+  <div class="form-container row">
+    <form class="form-inline col-md-6 col-md-offset-3" method="POST" action="/thief">
+      <div class="form-group form-group_full-width">
+        <label class="sr-only" for="exampleInputAmount">Адресс сайта...</label>
+        <div class="input-group input-group_full-width">
+          <div class="input-group-addon input-group-addon_5">URL:</div>
+          <input type="text" class="form-control" name="url" id="exampleInputAmount" placeholder="Адресс сайта...">
         </div>
-        <button type="submit" class="btn btn-primary">Своровать</button>
-      </form>
-    </div>
+      </div>
+      <button type="submit" class="btn btn-primary thief_button">Своровать</button>
+    </form>
   </div>
+
+
 
 
   </body>
