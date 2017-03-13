@@ -29,3 +29,5 @@ node_modules
 
 # Stollen websaits
 thief-box
+compressed/*
+.idea
